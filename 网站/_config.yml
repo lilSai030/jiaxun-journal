@@ -1,0 +1,25 @@
+title: The Jiaxun Journal
+description: An independent archive of writing, research and community work.
+baseurl: /jiaxun-journal
+markdown: kramdown
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+  writings:
+    output: true
+    permalink: /writing/:name/
+defaults:
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: entry
+  - scope:
+      path: ""
+      type: writings
+    values:
+      layout: entry
+exclude:
+  - README.md
+  - GUIDE.md
