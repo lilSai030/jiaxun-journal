@@ -1,0 +1,78 @@
+media:
+  input: media
+  output: /media
+content:
+  - name: home
+    label: Homepage text
+    type: file
+    path: _data/home.yml
+    fields:
+      - name: intro
+        label: Cover introduction
+        type: text
+      - name: tagline
+        label: Cover subline
+        type: string
+      - name: about_heading
+        label: About heading
+        type: string
+      - name: about_first
+        label: About first paragraph
+        type: text
+      - name: about_second
+        label: About second paragraph
+        type: text
+      - name: contact_text
+        label: Contact introduction
+        type: text
+  - name: projects
+    label: Projects and research
+    type: collection
+    path: _projects
+    filename: "{primary}.md"
+    fields:
+      - name: title
+        label: Project title
+        type: string
+        required: true
+      - name: date
+        label: Date
+        type: date
+      - name: category
+        label: Category
+        type: string
+        description: "e.g. Community / Research / Programmes"
+      - name: summary
+        label: Short teaser for archive cards
+        type: text
+      - name: published
+        label: Publish on site
+        type: boolean
+      - name: body
+        label: Full project case study
+        type: rich-text
+  - name: writings
+    label: Writing and games
+    type: collection
+    path: _writings
+    filename: "{primary}.md"
+    fields:
+      - name: title
+        label: Work title
+        type: string
+        required: true
+      - name: date
+        label: Date
+        type: date
+      - name: category
+        label: Category
+        type: string
+      - name: summary
+        label: Short teaser
+        type: text
+      - name: published
+        label: Publish on site
+        type: boolean
+      - name: body
+        label: Excerpt or project notes
+        type: rich-text
